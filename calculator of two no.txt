@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+void main ()
+{
+float a,b,result;
+char op;
+clrscr();
+printf("Enter the Number=");
+scanf("%f",&a);
+printf("operation=");
+scanf(" %c",&op);
+printf("Enter the 2nd Number=");
+scanf("%f",&b);
+switch(op)
+{
+case '-':
+printf("%f",a-b);
+break;
+case '+':
+printf("%f",a+b);
+break;
+case '*':
+printf("%f",a*b);
+break;
+case '/':
+printf("%f",a/b);
+break;
+}
+getch();
+}
