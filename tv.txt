@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<string.h>
+#include<conio.h>
+class dev
+{
+private:
+int num,rev,rem,temp,start,end;
+public:
+void input();
+void pro();
+};
+void dev::input()
+{
+cout<<"Enter the 1st No=";
+cin>>start;
+cout<<"Enter the Last No=";
+cin>>end;
+}
+void dev::pro()
+{
+cout<<"Pallindrom no between "<<start<<" And "<<end<<" are=";
+for(num=start;num<=end;num++)
+{
+temp=num;
+rev=0;
+while(temp)
+{
+rem=temp%10;
+temp=temp/10;
+rev=rev*10+rem;
+}
+if(num==rev)
+
+cout<<num<<endl;
+
+}
+}
+void main()
+{
+dev p;
+clrscr();
+p.input();
+p.pro();
+getch();
+}
