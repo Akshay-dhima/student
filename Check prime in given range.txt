@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+class prime
+{
+	private:
+	int start,end,i,j,c;
+	public:
+	void getdata();
+	void putdata();
+};
+void prime ::getdata()
+{
+	cout<<"Enter the Starting Value=";
+	cin>>start;
+	cout<<"Enter the End Value=";
+	cin>>end;
+	}
+void prime ::putdata()
+{	for(i=start;i<=end;i++)
+	{
+		c=0;
+		for(j=1;j<=i;j++)
+		{
+			if(i%j==0)
+			{
+			c++;
+			}
+		  }
+		  if(c==2)
+		  {
+		  cout<<"\nPrime no is="<<i;
+		  }
+	 }
+
+ }
+ void main()
+ {
+ prime t;
+ clrscr();
+ t.getdata();
+ t.putdata();
+ getch();
+ }
