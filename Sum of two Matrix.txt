@@ -1,0 +1,63 @@
+//Sum of two Matrix
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+class matrix
+{
+	private:
+	int a[55][55],b[55][55],c,r,s[5][6],m,d,i,j,k;
+	public:
+	void getdata();
+	void getdata1();
+	void putdata();
+};
+
+void matrix::getdata()
+{
+	cout<<"Enter the Row of Matrix=";
+	cin>>r;
+	cout<<"Enter the Column of Matrix=";
+	cin>>c;
+	cout<<"Enter the "<<r<<" x "<<c<<" First Matrix Elements=";
+	for(i=1;i<=r;i++)
+	       {	for(j=1;j<=c;j++)
+
+			   cin>>a[i][j];
+			    }
+}
+void matrix::getdata1()
+{
+
+	cout<<"Enter the "<<r<<" x "<<c<<" Second Matrix Elements=";
+	for(i=1;i<=r;i++)
+	     {	for(j=1;j<=c;j++)
+		 cin>>b[i][j];
+			    }
+}
+void matrix::putdata()
+{
+	for(i=1;i<=r;i++)
+		for(j=1;j<=c;j++)
+		 {
+		 s[i][j]=a[i][j]+b[i][j];
+		 }
+	 cout<<"Sum of Two Matrix=\n";
+	 for(i=1;i<=r;i++)
+	     {	for(j=1;j<=c;j++)
+		cout<<setw(4)<<s[i][j];
+		cout<<endl;
+	      }
+
+}
+void main()
+{
+matrix p;
+clrscr();
+p.getdata();
+p.getdata1();
+p.putdata();
+getch();
+}
+
+
+
