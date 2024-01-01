@@ -1,0 +1,42 @@
+//Traversing of Matrix
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+class matrix
+{
+	private:
+	int a[89][89],b[99][99],c,r,s[9][9],i,j,k;
+	public:
+	void gatdata();
+	void putdata();
+};
+
+void matrix::gatdata()
+{
+	cout<<"Enter the Row of Matrix=";
+	cin>>r;
+	cout<<"\nEnter the Column of Matrix=";
+	cin>>c;
+	cout<<"\nEnter the "<<r<<" x "<<c<<"Matrix Elements=";
+		for(i=1;i<=r;i++)
+		{       for(j=1;j<=c;j++)
+			 cin>>a[i][j];
+		 }
+}
+
+void matrix::putdata()
+{        cout<<"Traversing of "<<r<<" x "<<c<<"Matrix Elements=";
+		for(i=1;i<=r;i++)
+		{       for(j=1;j<=c;j++)
+			cout<<setw(4)<<a[j][i];
+			cout<<endl;
+		 }
+}
+void main()
+{
+matrix d;
+clrscr();
+d.gatdata();
+d.putdata();
+getch();
+}
