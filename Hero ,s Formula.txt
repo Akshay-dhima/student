@@ -1,0 +1,49 @@
+//Heron Formula
+#include<iostream.h>
+#include<math.h>
+#include<conio.h>
+class hero
+{
+	private:
+	float a,b,c,s,ar;
+	public:
+	void getdata();
+	friend void area(hero p);
+};
+void hero::getdata()
+{
+	cout<<"Enter the Sides of the Triangle\n";
+	cout<<"a=";
+	cin>>a;
+	cout<<"b=";
+	cin>>b;
+	cout<<"c=";
+	cin>>c;
+}
+void area(hero p)
+{
+	p.s=(p.a+p.b+p.c)/2;
+	p.ar=sqrt(p.s*(p.s-p.a)*(p.s-p.b)*(p.s-p.c));
+	cout<<"Area of Triangle="<<p.ar;
+}
+void main()
+{
+hero l;
+clrscr();
+l.getdata();
+area(l);
+getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
