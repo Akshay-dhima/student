@@ -1,0 +1,28 @@
+//Print the table
+#include<iostream.h>
+#include<conio.h>
+class table
+{
+	private:
+	double n,i,j,k;
+	public:
+	table();
+};
+table::table()
+{
+	cout<<"Enter the Number=";
+	cin>>n;
+	i=1;
+	cout<<"\nTable is=";
+	while(i<=10)
+	{
+	cout<<endl<<n<<" x "<<i<<" = "<<n*i;
+	i++;
+	}
+}
+void main()
+{
+	clrscr();
+	table p;
+	getch();
+}
