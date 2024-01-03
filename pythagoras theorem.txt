@@ -1,0 +1,66 @@
+#include<iostream.h>
+#include<math.h>
+#include<conio.h>
+class py
+{
+	private:
+	float h,p,b,k,i;
+	public:
+	void hyp();
+	void base();
+	void per();
+};
+void py::hyp()
+{
+	cout<<"\nEnter the Perpendicular=";
+	cin>>p;
+	cout<<"\nEnter the Base=";
+	cin>>b;
+	h=(b*b)+(p*p);
+	cout<<"\nHypotenuse ="<<sqrt(h);
+}
+void py::base()
+{       cout<<"\nEnter the Perpendicular=";
+	cin>>p;
+	cout<<"\nEnter the Hypotenuse=";
+	cin>>h;
+	b=(h*h)-(p*p);
+	cout<<"\nBase ="<<sqrt(b);
+}
+void py::per()
+{
+	cout<<"\nEnter the Base=";
+	cin>>b;
+	cout<<"\nEnter the Hypotenuse=";
+	cin>>h;
+	p=(h*h)-(p*p);
+	cout<<"\nPerpendicular="<<sqrt(p);
+}
+void main()
+{
+	py a;
+	int t;
+	clrscr();
+	cout<<"Pythagoras Theorem\n";
+	cout<<"\n(1) Base\n";
+	cout<<"\n(2) Hypotenuse\n";
+	cout<<"\n(3) Perpendicular\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+	case 1:
+	a.base();
+	break;
+	case 2:
+	a.hyp();
+	break;
+	case 3:
+	a.per();
+	break;
+	default:
+	cout<<"Not Valid";
+	break;
+	}
+     getch();
+}
