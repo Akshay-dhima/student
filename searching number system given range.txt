@@ -1,0 +1,147 @@
+//Searching Number System in Given Range
+#include<iostream.h>
+#include<stdlib.h>
+#include<conio.h>
+class number
+{
+	private:
+	int s,e,n,m,i,j,k,c;
+	public:
+	void odd();
+	void even();
+	void natural();
+	void whole();
+	void prime();
+	void integer();
+};
+void number::integer()
+{
+cout<<"Enter the Starting Number=";
+cin>>s;
+cout<<"Enter the end Number=";
+cin>>e;
+for(i=s;i<=e;i++)
+{
+	cout<<"\n\tInteger no is="<<i;
+}
+
+}
+void number ::prime()
+{
+cout<<"Enter the Starting Number=";
+cin>>s;
+cout<<"Enter the end Number=";
+cin>>e;
+for(i=s;i<=e;i++)
+{       c=0;
+	for(j=1;j<=i;j++)
+	{
+		if(i%j==0)
+		{
+		c++;
+		}
+	}
+	if(c==2)
+	{
+	 cout<<"\n\tPrime Number is="<<i;
+	}
+}
+
+}
+void number ::whole()
+{
+cout<<"\nEnter the end Number=";
+cin>>e;
+for(i=0;i<=e;i++)
+{
+	cout<<"\n\tWhole Number is="<<i;
+
+}
+}
+void number::natural()
+{
+cout<<"\nEnter the end Number=";
+cin>>e;
+for(i=1;i<=e;i++)
+{
+	if(i==0)
+	{
+	cout<<"Not Natural Number"<<i;
+	}
+	else
+	{
+	cout<<"\n\tNatural Number is ="<<i;
+	}
+}
+
+}
+void number::even()
+{
+cout<<"Enter the Starting Number=";
+cin>>s;
+cout<<"Enter the end Number=";
+cin>>e;
+for(i=s;i<=e;i++)
+{
+	if(i%2==0)
+	{
+		cout<<"\nEven Number is="<<i;
+	}
+}
+
+}
+void number::odd()
+{
+cout<<"Enter the Starting Number=";
+cin>>s;
+cout<<"Enter the end Number=";
+cin>>e;
+for(i=s;i<=e;i++)
+{
+	if(i%2==1)
+	{
+		cout<<"\nOdd Number is="<<i;
+	}
+}
+
+}
+void main()
+{
+number o;
+int s,e,n,m,i,j,k,c;
+clrscr();
+cout<<" Searching the Numbers System in given Range\n\n";
+cout<<"(1) Natural Number\n";
+cout<<"(2) Whole Number\n";
+cout<<"(3) Integer Number\n";
+cout<<"(4) Even Number\n";
+cout<<"(5) Odd Number Number\n";
+cout<<"(6) Prime Number\n";
+cout<<"\nEnter Your Choice=";
+cin>>k;
+switch(k)
+{
+case 1:
+o.natural();
+break;
+case 2:
+o.whole();
+break;
+case 3:
+o.integer();
+break;
+case 4:
+o.even();
+break;
+case 5:
+o.odd();
+break;
+case 6:
+o.prime();
+break;
+default:
+cout<<"\n\t\tSorry Not Valid ";
+break;
+}
+getch();
+}
