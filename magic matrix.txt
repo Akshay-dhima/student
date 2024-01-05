@@ -1,0 +1,85 @@
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+class magic
+{
+	private:
+	int a[50][50],i,j,m,n,s,rs,cs,ds,magic;
+	public:
+	void getdata();
+
+};
+void magic::getdata()
+{
+cout<<"Enter the Row of Matrix=";
+cin>>m;
+cout<<"Enter the Column of Matrix=";
+cin>>n;
+if(m==n)
+{
+	cout<<"Enter the Elements of Matrix\n";
+	for(i=1;i<=m;i++)
+	{
+		for(j=1;j<=n;j++)
+		{
+			cin>>a[i][j];
+		 }
+	}
+	cout<<"\n\nMatrix is \n";
+	for(i=1;i<=m;i++)
+	{
+		for(j=1;j<=n;j++)
+
+			cout<<setw(4)<<a[i][j];
+			cout<<endl;
+	 }
+	 ds=0;
+	 for(i=1;i<=m;i++)
+	 {
+		for(j=1;j<=n;j++)
+		{
+			if(i==j)
+			{
+			 ds=ds+a[i][j];
+			 }
+		 }
+	   }
+
+	   for(i=1;i<=m;i++)
+	   {
+		rs=0;
+		for(j=1;j<=n;j++)
+		{
+			rs=rs+a[i][j];
+		}
+		if(rs!=ds)
+		{
+			cout<<"\ngiven matrix is not a magic square";
+		}
+	     }
+	     for(i=1;i<=m;i++)
+	     {
+		cs=0;
+		for(j=1;j<=n;j++)
+		{
+			cs=cs+a[i][j];
+		}
+		if(cs!=ds)
+		{
+		cout<<"\nGiven Matrix is not a magic square";
+		}
+	      }
+	      cout<<"\ngiven matrix is a magic square matrix";
+	      }
+	      else
+	      {
+	      cout<<"\n\n please enter square matrix";
+	      }
+}
+void main()
+{
+magic l;
+clrscr();
+l.getdata();
+getch();
+}
