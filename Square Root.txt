@@ -1,0 +1,35 @@
+//Find the Square of Given Range Value
+#include<iostream.h>
+#include<conio.h>
+class square
+{
+	private:
+	double start,end,i,j,s;
+	public:
+	square();
+};
+square::square()
+{
+	cout<<"Enter the Starting Value=";
+	cin>>start;
+	cout<<"Enter the Last Value=";
+	cin>>end;
+	for(i=start;i<=end;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			s=j*i;
+		}
+			cout<<"\nSquare of "<<i<<" is = "<<s;
+
+	}
+}
+
+void main()
+{
+clrscr();
+square u;
+getch();
+}
+
+
