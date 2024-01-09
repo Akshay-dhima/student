@@ -1,0 +1,41 @@
+//Find the Factorial of Given Range
+#include<iostream.h>
+#include<conio.h>
+class fact
+{
+	private:
+	double start,end,i,j,fact;
+	public:
+	void getdata();
+	void putdata();
+};
+void fact::getdata()
+{
+	cout<<"Enter the Starting Value=";
+	cin>>start;
+	cout<<"Enter the End Value=";
+	cin>>end;
+}
+void fact::putdata()
+{
+for(i=start;i<=end;i++)
+{
+	fact=1;
+	for(j=1;j<=i;j++)
+	{
+
+	fact=fact*j;
+	}
+	cout<<endl<<i<<"! = "<<fact;
+
+      }
+
+}
+void main()
+{
+fact p;
+clrscr();
+p.getdata();
+p.putdata();
+getch();
+}
