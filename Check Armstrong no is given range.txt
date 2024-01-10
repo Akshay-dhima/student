@@ -1,0 +1,40 @@
+//Find Armstrong In Given Range
+#include<iostream.h>
+#include<conio.h>
+class arm
+{
+	private:
+	int num,r,sum,temp,start,end;
+	public:
+	arm();
+};
+arm::arm()
+{
+cout<<"Enter the First Number=";
+cin>>start;
+cout<<"Enter the Last Number=";
+cin>>end;
+for(int i=start;i<=end;i++)
+{
+	temp=i;
+	sum=0;
+	while(temp!=0)
+	{
+	r=temp%10;
+	temp/=10;
+	sum+=(r*r*r);
+	}
+	if(sum==i)
+	cout<<endl<<"Armstrong No is="<<i;
+
+}
+
+}
+
+void main()
+{
+clrscr();
+arm p;
+getch();
+}
+
