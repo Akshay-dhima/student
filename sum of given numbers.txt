@@ -1,0 +1,30 @@
+//Sum of Given Number
+#include<iostream.h>
+#include<conio.h>
+class sum
+{
+	double a[99],i,j,k,l,start,end;
+	public:
+	sum();
+};
+sum::sum()
+{
+
+	cout<<"Enter Limit Number=";
+	cin>>end;
+	     l=0;
+	     cout<<"Enter the "<<end<<" Elements="<<endl;
+	     for(j=1;j<=end;j++)
+	     {
+	     cin>>a[j];
+	     l+=a[j];
+	     }
+		cout<<"Sum of Elements="<<l;
+
+}
+void main()
+{
+clrscr();
+sum p;
+getch();
+}
