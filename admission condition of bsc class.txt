@@ -1,0 +1,45 @@
+//Student of Bsc Admissions Conditions
+#include<iostream.h>
+#include<conio.h>
+class bsc
+{
+	double m,c,p,t;
+	char m1,p1,c1;
+	public:
+	bsc();
+};
+bsc::bsc()
+{
+	cout<<"Admission of B.sc.class";
+	cout<<"\nEnter the Maths Marks=";
+	cin>>m;
+	cout<<"\nEnter the Chemistry Marks=";
+	cin>>c;
+	cout<<"\nEnter the Physics Marks=";
+	cin>>p;
+	if(m>=50 && c>=45 && p>=40 && (m+c+p)>=180)
+	{
+	 cout<<"\nAdmission Allow="<<m;
+	 cout<<"\nAdmission Allow="<<c;
+	 cout<<"\nAdmission Allow="<<p;
+	 cout<<"\nAdmission Allow"<<" Student Total Marks is ="<<(p+c+m);
+	}
+
+	else
+	{
+	cout<<"\nAdmission Not Allow="<<m;
+	cout<<"\nAdmission Not Allow="<<c;
+	cout<<"\nAdmission Not Allow="<<p;
+	cout<<"\nAdmission Not Allow"<<" Student Total Marks is ="<<(p+c+m);
+	}
+
+}
+void main()
+{
+clrscr();
+bsc p;
+getch();
+}
+
+
+
