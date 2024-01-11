@@ -1,0 +1,28 @@
+//Searing Two Biggest Number
+#include<iostream.h>
+#include<conio.h>
+class largest
+{
+	private:
+	float a,b,c;
+	public:
+	void getdata();
+};
+void largest::getdata()
+{
+	cout<<"Enter the 1st Number=";
+	cin>>a;
+	cout<<"Enter the 2nd Number=";
+	cin>>b;
+	(a>b)?
+	cout<<"Biggest Number is="<<a:cout<<"Biggest Number is="<<b;
+
+}
+void main()
+{
+largest p;
+clrscr();
+p.getdata();
+getch();
+}
+
