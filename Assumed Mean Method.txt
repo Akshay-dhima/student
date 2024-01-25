@@ -1,0 +1,61 @@
+//Assumed Mean Method
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+void main()
+{
+float a[99],A,fidi[99],fidi1,di[99],a1[99],f[99],xi[99],c[99],fi=0,i,j,n;
+clrscr();
+cout<<"Assumed Mean Method\n\nEnter the Limit=";
+cin>>n;
+cout<<"\nEnter the "<<n<<" Elements="<<endl;
+	for(i=1;i<=n;i++)
+	{
+		cin>>a[i]>>a1[i];;
+
+		cout<<endl;
+
+	}
+cout<<"\nEnter the Frequency=\n\n";
+	for(i=1;i<=n;i++)
+	{       cout<<"\t\t";
+		cin>>f[i];
+		fi+=f[i];
+	}
+	cout<<"\nTotal Frequency="<<fi;
+cout<<"\n\n\n Xi =\n\n";
+	for(i=1;i<=n;i++)
+	{
+	   cout<<"\t\t";
+	  xi[i]=(a[i]+a1[i])/2;
+	  cout<<xi[i]<<endl;
+	}
+	for(i=1;i<=n;i++)
+	{
+	    A=xi[i/2];
+	}
+	cout<<"Value of A ="<<A<<endl<<endl;
+cout<<"\n\n di =\n";
+	for(i=1;i<=n;i++)
+	{
+	     cout<<"\t\t";
+	     di[i]=xi[i]-A;
+	     cout<<di[i]<<endl;
+	}
+cout<<"\n\n fidi =\n";
+	for(i=1;i<=n;i++)
+	{
+		cout<<"\t\t";
+		fidi[i]=f[i]*di[i];
+		cout<<fidi[i]<<endl;
+		fidi1+=fidi[i];
+	}
+	cout<<"\n Value of Fidi="<<fidi1;
+cout<<"\nAccording to Assumed Mean Method=a+(fidi/fi)\n";
+cout<<"\n\t\t\t\t\="<<A+(fidi1/fi);
+
+
+
+
+getch();
+}
