@@ -1,0 +1,73 @@
+//step division method
+#include<iostream.h>
+#include<conio.h>
+class dev
+{
+	private:
+	float a[99],n,t[99],m,a1[99],f[99],h,u1[99],a2,b[99],i,j,k[99],p;
+	public:
+	dev();
+};
+dev::dev()
+{
+	cout<<"Enter the Limit=";
+	cin>>n;
+	cout<<"\nEnter the "<<n<<" Element=\n";
+	for(i=1;i<=n;i++)
+	{
+		cin>>a[i];
+		cin>>a1[i];
+		cout<<endl;
+	}
+	p=0;
+	cout<<"\nEnter Frequency Elements=\n";
+	for(i=1;i<=n;i++)
+	{
+		cin>>f[i];
+		p+=f[i];
+	}
+	cout<<endl<<"N="<<p;
+	cout<<"\n\n\nMid Point of x=\n";
+	for(i=1;i<=n;i++)
+	{
+	       k[i]=(a[i]+a1[i])/2;
+		cout<<k[i]<<endl;
+
+	}
+
+		for(i=1;i<=n;i++)
+		{
+			a2=k[i/2];
+		}
+		cout<<"\nValue of A="<<a2;
+
+		h=a1[1]-a[1];
+		cout<<"\n\nValue of h="<<h;
+
+		cout<<"\n\n ui=";
+		for(i=1;i<=n;i++)
+		{
+		     u1[i]=(k[i]-a2)/h;
+		    cout<<ends<<endl<<u1[i];
+		}
+
+		cout<<"\n\nFi*ui=";
+		m=0;
+		for(i=1;i<=n;i++)
+		{
+		     t[i]=f[i]*u1[i];
+		     cout<<endl<<t[i];
+		     m+=t[i];
+		}
+		cout<<"\n\nValue of fiui="<<m;
+
+       cout<<"\n\nAccording to Step Division Method= a+(fiui/n)*h\n\t\t\t"<<endl<<a2<<"+("<<m<<"/"<<p<<")*"<<h<<" = "<<a2+(m/p)*h;
+
+
+}
+void main()
+{
+clrscr();
+dev p;
+getch();
+}
