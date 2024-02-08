@@ -1,0 +1,1256 @@
+//10th Class Maths Calculator
+#include<iostream.h>
+#include<stdlib.h>
+#include<math.h>
+#include<conio.h>
+class hr
+{
+float a,s,c,t1,an,a2,r,b,e,n,l,k,d,p,m,fixi,fi,fidi,f0,f2,fiui,f,cf,h;
+int t;
+public:
+void tri();
+void sum();
+void rt();
+void trca();
+void ttable();
+void ap();
+void pair();
+void quad();
+void cg();
+void stati();
+void pro();
+void sav();
+void cir();
+};
+void hr::tri()
+{
+float h,p,b;
+char op;
+cout<<"\nPythagoras Theorem\n";
+cout<<"(p) Perpendicular=\n(h) Hypotenuse\n(b) Base";
+cout<<"\nEnter your choice=";
+cin>>op;
+switch(op)
+{
+case 'h':
+{
+	cout<<"\n Hypotenuse Formula is :- (H^2)=(P^2)+(B^2)";
+	cout<<"\nPerpendicular=";
+	cin>>p;
+	cout<<"\nBase=";
+	cin>>b;
+	h=sqrt((p*p)+(b*b));
+	cout<<"\nHypotenuse="<<h;
+	break;
+}
+case 'b':
+{
+	cout<<"\n Base Formula is :- (B^2)=(H^2)-(P^2)";
+	cout<<"\nPerpendicular=";
+	cin>>p;
+	cout<<"\nHypotenuse=";
+	cin>>h;
+	b=sqrt((h*h)-(p*p));
+	cout<<"\nBase="<<b;
+	break;
+}
+case 'p':
+{
+	cout<<"\n Perpendicular Formula is :- (P^2)=(H^2)-(B^2)";
+	cout<<"\nBase=";
+	cin>>b;
+	cout<<"\nHypotenuse=";
+	cin>>h;
+	p=sqrt((h*h)-(b*b));
+	cout<<"\nPerpendicular="<<p;
+break;
+}
+}
+
+
+}
+
+
+void hr::rt()
+{
+	cout<<"\nRight Triangle ABC,right-angled at B All Formulas\n";
+	cout<<"(1) sin \n";
+	cout<<"(2) cos \n";
+	cout<<"(3) tan \n";
+	cout<<"\nEnter Your Choice= ";
+	cin>>t;
+switch(t)
+{
+case 1:
+cout<<"Enter the Side Opposite to angle A=";
+cin>>s;
+cout<<"Hypotenuse=";
+cin>>h;
+fi=s/h;
+cout<<"Value of sin("<<fi<<")";
+break;
+case 2:
+cout<<"Enter the Side Agjacent to angle A=";
+cin>>s;
+cout<<"Hypotenuse=";
+cin>>h;
+fi=s/h;
+cout<<"Value of cos("<<fi<<")";
+break;
+case 3:
+cout<<"Enter the Side Opposite to angle A=";
+cin>>s;
+cout<<"Enter the Side Adjacent=";
+cin>>h;
+fi=s/h;
+cout<<"Value of tan("<<fi<<")";
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+break;
+}
+
+
+}
+
+
+void hr::sum()
+{
+cout<<"\n (1) Trigonomentry Table\n";
+cout<<"\n (2) Trigonometric Ratios of Complementary Angles All Formulas\n";
+cout<<"\n (3) Right Triangle ABC,right-angled at B All Formulas\n";
+cout<<"\n Enter Your Choice=";
+cin>>t;
+switch(t)
+{
+case 1:
+ttable();
+break;
+case 2:
+trca();
+break;
+case 3:
+rt();
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+break;
+}
+}
+void hr::trca()
+{
+cout<<"\n Trigonometric Ratios of Complementary Angles All Formulas\n";
+cout<<"(1) Sin \n";
+cout<<"(2) Cos \n";
+cout<<"(3) Tan \n";
+cout<<"(4) Cosec \n";
+cout<<"(5) Sec \n";
+cout<<"(6) Cot \n";
+cout<<"\nEnter Your Choice= ";
+cin>>t;
+switch(t)
+{
+case 1:
+cout<<"Enter the Value of Sin(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of=Cos"<<t1<<")";
+break;
+case 2:
+cout<<"Enter the Value of Cos(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of=sin("<<t1<<")";
+break;
+case 3:
+cout<<"Enter the Value of tan(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of=Cot("<<t1<<")";
+break;
+case 4:
+cout<<"Enter the Value of Cosec(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of sec("<<t1<<")";
+break;
+case 5:
+cout<<"Enter the Value of sec(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of Cosec("<<t1<<")";
+break;
+case 6:
+cout<<"Enter the Value of cot(A)=";
+cin>>a;
+t1=(90-a);
+cout<<"Value of tan("<<t1<<")";
+break;
+
+}
+
+
+}
+void hr::ttable()
+{
+cout<<"\n Trigonomentry Table\n";
+cout<<"(1) Sin \n";
+cout<<"(2) Cos \n";
+cout<<"(3) Tan \n";
+cout<<"(4) Cosec \n";
+cout<<"(5) Sec \n";
+cout<<"(6) Cot \n";
+cout<<"Enter Your Choice= ";
+cin>>t;
+switch(t)
+{
+	case 1:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=0;
+		cout<<"Value Sin(0) is="<<a;
+		break;
+		case 30:
+		a=0.5;
+		cout<<"Value Sin(30) is="<<a;
+		break;
+		case 45:
+		a=(1/sqrt(2));
+		cout<<"Value Sin(45) is="<<a;
+		break;
+		case 60:
+		a=(sqrt(3)/2);
+		cout<<"Value Sin(60) is="<<a;
+		break;
+		case 90:
+		a=(1);
+		cout<<"Value Sin(90) is="<<a;
+		break;
+	}
+	break;
+	case 2:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=(1);
+		cout<<"Value Cos(0) is="<<a;
+		break;
+		case 30:
+		a=((sqrt(3))/2);
+		cout<<"Value Cos(30) is="<<a;
+		break;
+		case 45:
+		a=(1/sqrt(2));
+		cout<<"Value Cos(45) is="<<a;
+		break;
+		case 60:
+		a=(.5);
+		cout<<"Value Cos(60) is="<<a;
+		break;
+		case 90:
+		a=(0);
+		cout<<"Value Cos(90) is="<<a;
+		break;
+	}
+
+	break;
+	case 3:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=0;
+		cout<<"Value tan(0) is="<<a;
+		break;
+		case 30:
+		a=(1/sqrt(3));
+		cout<<"Value tan(30) is="<<a;
+		break;
+		case 45:
+		a=(1);
+		cout<<"Value tan(45) is="<<a;
+		break;
+		case 60:
+		a=(sqrt(3));
+		cout<<"Value tan(60) is="<<a;
+		break;
+		case 90:
+		a=(1/sqrt(2));
+		cout<<"Value tan(90) is="<<"Not Defined";
+		break;
+	}
+	break;
+	case 4:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=(1/sqrt(2));
+		cout<<"Value Cosec(0) is="<<"Not Defined";
+		break;
+		case 30:
+		a=2;
+		cout<<"Value Cosec(30) is="<<a;
+		break;
+		case 45:
+		a=(sqrt(2));
+		cout<<"Value Cosec(45) is="<<a;
+		break;
+		case 60:
+		a=(2/sqrt(3));
+		cout<<"Value Cosec(60) is="<<a;
+		break;
+		case 90:
+		a=(1);
+		cout<<"Value Cosec(90) is="<<a;
+		break;
+	}
+	break;
+	case 5:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=1;
+		cout<<"Value Sec(0) is="<<a;
+		break;
+		case 30:
+		a=(2/sqrt(3));
+		cout<<"Value Sec(30) is="<<a;
+		break;
+		case 45:
+		a=(sqrt(2));
+		cout<<"Value Sec(45) is="<<a;
+		break;
+		case 60:
+		a=(2);
+		cout<<"Value Sec(60) is="<<a;
+		break;
+		case 90:
+		a=(1);
+		cout<<"Value Sec(90) is="<<"Not Defined";
+		break;
+	}
+	break;
+	case 6:
+	cout<<"\nEnter the Value of Angle \n";
+	cout<<"\n0\n30\n45\n60\n90\n";
+	cout<<"\nEnter Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+		case 0:
+		a=(1/sqrt(2));
+		cout<<"Value Cot(0) is="<<"Not Defined";
+		break;
+		case 30:
+		a=(sqrt(3));
+		cout<<"Value Cot(30) is="<<a;
+		break;
+		case 45:
+		a=(1);
+		cout<<"Value Cot(45) is="<<a;
+		break;
+		case 60:
+		a=(1/sqrt(3));
+		cout<<"Value Cot(60) is="<<a;
+		break;
+		case 90:
+		a=0;
+		cout<<"Value Cot(90) is="<<a;
+		break;
+	}
+	break;
+	default:
+	cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+	break;
+
+
+}
+
+
+
+
+
+}
+
+void hr::pair()
+{
+cout<<"\nPair of Linear Equations in Two Variables\n";
+cout<<"(1) Elimination Method\n";
+cout<<"(2) Substitution Method\n";
+cout<<"(3) Cross-Multiplication Method\n";
+cout<<"Enter your Choice=";
+cin>>t;
+switch(t)
+{
+case 1:
+float x,y,eq1,eq2,eq3,p,x1,y1,p1,m,k,n,m1,k1,n1,h1,h2,h3,g,g1,g2;
+cout<<"Elimination Method"<<endl;
+cout<<"Enter the 1st Equation Elements";
+cout<<"\nx=";
+cin>>x;
+cout<<"\ny=";
+cin>>y;
+cout<<"\nsimple value=";
+cin>>p;
+cout<<"\nEnter the 2nd Equation Elements";
+cout<<"\nx=";
+cin>>x1;
+cout<<"\ny=";
+cin>>y1;
+cout<<"\nsimple value=";
+cin>>p1;
+m=(x1*x);
+n=(x1*y);
+k=(x1*p);
+m1=(x*x1);
+n1=(x*y1);
+k1=(x*p1);
+eq1=(m-m1);
+eq2=(n-n1);
+eq3=(k-k1);
+h1=(eq3)/(eq2);
+
+g=(y*h1);
+g1=(p-g);
+g2=g1/x;
+if(h1<0 || g1<0 )
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+cout<<"\nNo Solution";
+}
+else
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+}
+break;
+case 2:
+
+cout<<"Substitution Method"<<endl;
+cout<<"Enter the 1st Equation Elements";
+cout<<"\nx=";
+cin>>x;
+cout<<"\ny=";
+cin>>y;
+cout<<"\nsimple value=";
+cin>>p;
+cout<<"\nEnter the 2nd Equation Elements";
+cout<<"\nx=";
+cin>>x1;
+cout<<"\ny=";
+cin>>y1;
+cout<<"\nsimple value=";
+cin>>p1;
+m=(x1*x);
+n=(x1*y);
+k=(x1*p);
+m1=(x*x1);
+n1=(x*y1);
+k1=(x*p1);
+eq1=(m-m1);
+eq2=(n-n1);
+eq3=(k-k1);
+h1=(eq3)/(eq2);
+
+g=(y*h1);
+g1=(p-g);
+g2=g1/x;
+if(h1<0 || g1<0 )
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+cout<<"\nNo Solution";
+}
+else
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+}
+break;
+case 3:
+cout<<"Cross-Multiplication Method"<<endl;
+cout<<"Enter the 1st Equation Elements";
+cout<<"\nx=";
+cin>>x;
+cout<<"\ny=";
+cin>>y;
+cout<<"\nsimple value=";
+cin>>p;
+cout<<"\nEnter the 2nd Equation Elements";
+cout<<"\nx=";
+cin>>x1;
+cout<<"\ny=";
+cin>>y1;
+cout<<"\nsimple value=";
+cin>>p1;
+m=(x1*x);
+n=(x1*y);
+k=(x1*p);
+m1=(x*x1);
+n1=(x*y1);
+k1=(x*p1);
+eq1=(m-m1);
+eq2=(n-n1);
+eq3=(k-k1);
+h1=(eq3)/(eq2);
+
+g=(y*h1);
+g1=(p-g);
+g2=g1/x;
+if(h1<0 || g1<0 )
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+cout<<"\nNo Solution";
+}
+else
+{
+cout<<endl<<"Answer=";
+cout<<endl<<"y="<<h1;
+cout<<endl<<"x="<<g2;
+}
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+break;
+}
+
+}
+void hr::quad()
+{
+float a,t,b,c,d,r1,r2;
+cout<<"\nQuadratic Equations Formula is :- (-b)+- sqrt((b^2)-4ac)/2a";
+cout<<"\nEnter Elements of Quadratic Equations \n";
+cout<<"\na= ";
+cin>>a;
+cout<<"\nb= ";
+cin>>b;
+cout<<"\nc= ";
+cin>>c;
+d=(b*b)-(4*a*c);
+if(d<0)
+{
+cout<<"\nRoots are not Equal";
+}
+else
+if(d==0)
+{
+r1=(-b)/(2*a);
+r2=(-b)/(2*a);
+cout<<"\nRoot 1="<<r1<<endl;
+cout<<"\nRoot 2="<<r2<<endl;
+}
+else
+if(d>0)
+{
+t=sqrt(d);
+r1=(-b+t)/(2*a);
+r2=(-b-t)/(2*a);
+cout<<"Roots are Real";
+cout<<"\nRoot 1="<<r1<<endl;
+cout<<"\nRoot 2="<<r2<<endl;
+cout<<"\nRoots are distinct real\n";
+}
+
+
+}
+
+
+void hr::cg()
+{
+cout<<"\nCordinate Geometry all Formulas\n";
+cout<<"(1) Distance Between Method\n";
+cout<<"(2) Distance of a point Origin Method\n";
+cout<<"(3) Coordinate Segment Joining Method\n";
+cout<<"(4) Coordinate Mid Point Segment Joining Method\n";
+cout<<"(5) Coordinate Area of Triangle \n";
+cout<<"\nEnter Your Choice=";
+cin>>t;
+switch (t)
+{
+float x,m1,m2,y,x1,x2,y2,y1,x3,y3;
+case 1:
+cout<<" According to Distance Between Method is :- sqrt(((x2 - x1)^2)+((y2-y1)^2))\n";
+cout<<"x1=";
+cin>>x1;
+cout<<"x2=";
+cin>>x2;
+cout<<"y1=";
+cin>>y1;
+cout<<"y2=";
+cin>>y2;
+a=(x2-x1);
+l=(y2-y1);
+a=(a*a);
+l=l*l;
+h=a+l;
+cout<<" Distance Between="<<sqrt(h);
+break;
+case 2:
+cout<<"According to Distance Between Origin Method :- sqrt((x^2)+(y^2))\n";
+cout<<"x=";
+cin>>x;
+cout<<"y=";
+cin>>y;
+h=(x*x)+(y*y);
+cout<<" Distance Between Origin="<<sqrt(h);
+break;
+case 3:
+cout<<"According to Coordinates of Segment joining Method:- x=((m1*x2)+(m2*x1))/(m1+m2)\n\t\t\t\t\t\t     y=((m1*y2)+(m2*y1))/(m1+m2)\n";
+cout<<"x1=";
+cin>>x1;
+cout<<"x2=";
+cin>>x2;
+cout<<"y1=";
+cin>>y1;
+cout<<"y2=";
+cin>>y2;
+cout<<"m1=";
+cin>>m1;
+cout<<"m2=";
+cin>>m2;
+cout<<"\nValue Coordinates of Segment joining="<<"\nx="<<((m1*x2)+(m2*x1))/(m1+m2)<<"\ny="<<((m1*y2)+(m2*y1))/(m1+m2);
+break;
+case 4:
+cout<<"According to Coordinates of Mid Point Segment joining Method:-\n x=(x1+x2)/2\n y=(y1+y1)/2\n";
+cout<<"\nx1=";
+cin>>x1;
+cout<<"x2=";
+cin>>x2;
+cout<<"y1=";
+cin>>y1;
+cout<<"y2=";
+cin>>y2;
+cout<<"\nValue Coordinates of Mid Point Segment joining="<<"\nx="<<((x2)+(x1))/(2)<<"\ny="<<((y2)+(y1))/(2);
+break;
+case 5:
+cout<<"According to Coordinates Area of Triangle Method:-\n(1/2)*(x1(y2-y3)+x2(y3-y1)+x3(y1-y2))\n";
+cout<<"x1=";
+cin>>x1;
+cout<<"x2=";
+cin>>x2;
+cout<<"y1=";
+cin>>y1;
+cout<<"y2=";
+cin>>y2;
+cout<<"x3=";
+cin>>x3;
+cout<<"y3=";
+cin>>y3;
+l=((x1*(y2-y3))+(x2*(y3-y1))+(x3*(y1-y2)));
+cout<<"\nValue of Coordinates Area of Triangle ="<<(l/2);
+break;
+
+}
+
+
+ }
+
+
+void hr::ap()
+{
+cout<<"\nArithmetic Progressions all Formulas\n";
+cout<<"(1) Ap with first term Arithmetic Progressions\n";
+cout<<"(2) Sn Sum of first n term Arithmetic Progressions\n";
+cout<<"(3) Sl last finite term Arithmetic Progressions\n";
+cout<<"\nEnter Your Choice=";
+cin>>t;
+	switch (t)
+	{
+		case 1:
+		cout<<"Choose Your Option\n";
+		cout<<"(1) an\n";
+		cout<<"(2) d\n";
+		cout<<"(3) n\n";
+		cout<<"(4) a\n";
+		cout<<"Enter the Your Choice=";
+		cin>>t;
+		switch (t)
+		{
+			case 1:
+			cout<<"a=";
+			cin>>a;
+			cout<<"n=";
+			cin>>n;
+			cout<<"a2=";
+			cin>>a2;
+			cout<<"d="<<a2-a;
+			h=n-1;
+			k=h*(a2-a);
+			l=k+a;
+			cout<<endl<<"\nValue of an="<<l;
+			break;
+			case 2:
+			cout<<"\na=";
+			cin>>a;
+			cout<<"\nn=";
+			cin>>n;
+			cout<<"\nan=";
+			cin>>h;
+			n=(n-1);
+			cout<<"Value of d="<<(h-a)/n;
+			break;
+			case 3:
+			cout<<"\na=";
+			cin>>a;
+			cout<<"\nd=";
+			cin>>d;
+			cout<<"\nan=";
+			cin>>an;
+			an=an-a;
+			an=an/d;
+			cout<<"Value of n="<<an+1;
+			break;
+			case 4:
+			cout<<"\nn=";
+			cin>>n;
+			cout<<"\nd=";
+			cin>>d;
+			cout<<"\nan=";
+			cin>>an;
+			a=(n-1)*d;
+			a=an-a;
+			cout<<"\nValue of n="<<a;
+			break;
+			default:
+			cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+			break;
+	}
+	break;
+		case 2:
+		cout<<"Choose Your Option\n";
+		cout<<"(1) sn\n";
+		cout<<"(2) d\n";
+		cout<<"Enter the Your Choice=";
+		cin>>t;
+		switch(t)
+		{
+		case 1:
+		cout<<"\na=";
+		cin>>a;
+		cout<<"\nn=";
+		cin>>n;
+		cout<<"\nd=";
+		cin>>d;
+		cout<<"\nValue of Sn="<<(n/2)*((2*a)+((n-1)*d));
+		break;
+		case 2:
+		float sn,n1,n2,b,c,e,k,l;
+		cout<<"\na=";
+		cin>>a;
+		cout<<"\nsn=";
+		cin>>sn;
+		cout<<"\nn=";
+		cin>>n;
+		e=2*a;
+		n1=(n/2);
+		n2=(n-1);
+		c=n1*e;
+		l=n2*n1;
+		sn=sn-c;
+		k=sn/l;
+		cout<<"\nValue of d="<<k;
+		break;
+		default:
+		cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+		break;
+	}
+	break;
+	case 3:
+	cout<<"Choose Your Option\n";
+	cout<<"(1) s\n";
+	cout<<"Enter the Your Choice=";
+	cin>>t;
+	switch(t)
+	{
+	case 1:
+	cout<<"\na=";
+	cin>>a;
+	cout<<"\nn=";
+	cin>>n;
+	cout<<"\nl=";
+	cin>>l;
+	cout<<"\nValue of Sn="<<(n/2)*(a+l);
+	break;
+	default:
+	cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+	break;
+	}
+	break;
+	default:
+	cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+	break;
+
+	break;
+	}
+
+
+}
+
+
+
+
+void hr::cir()
+{
+cout<<"\nAreas Related to Circle all Formulas\n";
+cout<<"(1) Circumference of a Circle\n";
+cout<<"(2) Area of Circle \n";
+cout<<"(3) Area Length of arc of a Sector of angle \n";
+cout<<"(4) Area of a Sector of a Circle \n";
+cout<<"(5) Area of Segment of a Circle \n";
+cout<<"(6) Area of Quadrant \n";
+cout<<"\nEnter your Choice=";
+cin>>t;
+switch(t)
+{
+case 1:
+cout<<"\nCircumference of a Circle";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Circumference of Circle="<<2*3.14*r;
+break;
+case 2:
+cout<<"\nArea of a Circle";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Area of Circle="<<(3.14)*(r*r);
+break;
+case 3:
+cout<<"\nArea Length of an arc Sector";
+cout<<"\n\tEnter the Degree=";
+cin>>a;
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Area Length of an arc Sector="<<(a/360)*2*3.14*r;
+break;
+case 4:
+cout<<"\nArea of a Sector of Circle";
+cout<<"\n\tEnter the Degree=";
+cin>>a;
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Area Length of an arc Sector="<<(a/360)*3.14*(r*r);
+break;
+case 5:
+cout<<"\nArea of a Segment of Circle";
+cout<<"\n\tEnter the Area of the Corresponding Sector=";
+cin>>a;
+cout<<"\n\tEnter the Area of the Corresponding Triangle=";
+cin>>r;
+cout<<"\nValue of Area of Segment of a Sector="<<a-r;
+break;
+case 6:
+cout<<"\nArea of Quadrant";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Area of Quadrant="<<((3.14)*(r*r))*0.25;
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+}
+}
+
+
+
+void hr::sav()
+{
+cout<<"\nSurface Areas and Volumes Formula \t\n";
+cout<<"(1) Surface area of a Cubolid \t\n";
+cout<<"(2) Surface area of a Cube \t\n";
+cout<<"(3) Curved Surface area of Cylinder\t\n";
+cout<<"(4) Total Surface area of a Cylinder\t\n";
+cout<<"(5) Curved Surface area of a Cone\t\n";
+cout<<"(6) Total Surface area of a Right Circular Cone\t\n";
+cout<<"(7) Surface area of a Sphere of Radius\t\n";
+cout<<"(8) Curved Surface area of a Hemisphere\t\n";
+cout<<"(9) Total Surface area of a Hemisphere\t\n";
+cout<<"(10) Volume of a Cuboid\t\n";
+cout<<"(11) Volume of a Cube\t\n";
+cout<<"(12) Volume of a Cylinder\t\n";
+cout<<"(13) Volume of a Cone\t\n";
+cout<<"(14) Volume of a Sphere of Radius\t\n";
+cout<<"(15) Volume of a Hemisphere\t\n";
+cout<<"(16) Area of Circle\t\n";
+cout<<"(17) Area of Triangle\t\n";
+cout<<"(18) Area of Square\t\n";
+cout<<"(19) Area of Rectangle\t\n";
+cout<<"(20) Volume of Frustum of a Cone\t\n";
+cout<<"(21) Curved Surface Area of a Frustum of a Cone\t\n";
+cout<<"(22) Total Surface Area of a Frustum of a Cone\t\n";
+cout<<"\nEnter your Choice=";
+cin>>t;
+switch(t)
+{
+case 1:
+cout<<"\nSurface area of a Cubolid \t\n";
+cout<<"\tEnter the Length=";
+cin>>l;
+cout<<"\tEnter the Breath=";
+cin>>b;
+cout<<"\tEnter the Height=";
+cin>>h;
+cout<<"\tValue of Surface area of a Cubolid="<<(2*((l*b)+(b*h)+(h*l)));
+break;
+case 2:
+cout<<"Surface area of a Cube \t\n";
+cout<<"\tEnter the Cube=";
+cin>>h;
+cout<<"\tValue of Surface area of a Cube="<<6*(h*h);
+break;
+case 3:
+cout<<" Curved Surface area of Cylinder\t\n";
+cout<<"\tEnter the Height=";
+cin>>h;
+cout<<"\tEnter the Radius=";
+cin>>r;
+cout<<"\tValue of Curved Surface area of a Cylinder="<<2*(3.14*r*h);
+break;
+case 4:
+cout<<" Total Surface area of Cylinder\t\n";
+cout<<"\tEnter the Height=";
+cin>>h;
+cout<<"\tEnter the Radius=";
+cin>>r;
+cout<<"\tValue of Total Surface area of a Cylinder="<<(2*3.14*r)*(r+h);
+break;
+case 5:
+cout<<" Curved Surface area of Cone\t\n";
+cout<<"\tEnter the Length=";
+cin>>l;
+cout<<"\tEnter the Radius=";
+cin>>r;
+cout<<"\tValue of Curved Surface area of a Cone="<<3.14*r*l;
+break;
+case 6:
+cout<<" Total Surface area of a Right Circular cone\t\n";
+cout<<"\tEnter the Length=";
+cin>>l;
+cout<<"\tEnter the Radius=";
+cin>>r;
+cout<<"\tValue of Total Surface area of a Right Circular Cone="<<(3.14*r*l)+((3.14)*(r*r))<<endl<<(3.14*r)*(l+r);
+break;
+case 7:
+cout<<"\nSurface area of a sphere of radius";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Surface area of a sphere of radius="<<4*3.14*(r*r);
+break;
+case 8:
+cout<<"\nCurved Surface Area of a Hemisphere";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Curved Surface area of a Hemisphere="<<2*(3.14)*(r*r);
+break;
+case 9:
+cout<<"\nTotal Surface Area of a Hemisphere";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Total Surface area of a Hemisphere="<<3*(3.14)*(r*r);
+break;
+case 10:
+cout<<"\nVolume of Cuboid";
+cout<<"\n\tEnter the Length=";
+cin>>l;
+cout<<"\n\tEnter the Breath=";
+cin>>b;
+cout<<"\n\tEnter the Height=";
+cin>>h;
+cout<<"\nValue of Volume of Cuboid="<<l*b*h;
+break;
+case 11:
+cout<<"\nVolume of Cube";
+cout<<"\n\tEnter the volume of cube=";
+cin>>a;
+cout<<"\nValue of Volume of Cube="<<a*a*a;
+break;
+case 12:
+cout<<"\nVolume of Cylinder";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\n\tEnter the Height=";
+cin>>h;
+cout<<"\nValue of Volume of Cylinder="<<3.14*(r*r)*h;
+break;
+case 13:
+cout<<"\nVolume of Cone";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\n\tEnter the Height=";
+cin>>h;
+cout<<"\nValue of Volume of Cone="<<(3.14*(r*r)*h)*(0.333);
+break;
+case 14:
+cout<<"\nVolume of a Sphere of Radius";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of a Sphere of Radius="<<(3.14)*(r*r*r)*1.33;
+break;
+case 15:
+cout<<"\nVolume of a Hemisphere";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of a Sphere of Radius="<<(3.14)*(r*r*r)*0.66666;
+break;
+case 16:
+cout<<"\nArea of a Circle";
+cout<<"\n\tEnter the Radius=";
+cin>>r;
+cout<<"\nValue of Area of Circle="<<(3.14)*(r*r);
+break;
+case 17:
+cout<<"\nArea of a Triangle";
+cout<<"\n\tEnter the Height=";
+cin>>h;
+cout<<"\n\tEnter the Breath=";
+cin>>b;
+cout<<"\nValue of Area of Triangle="<<0.5*(b*h);
+break;
+case 18:
+cout<<"\nArea of Square";
+cout<<"\n\tEnter the Area=";
+cin>>r;
+cout<<"\nValue of a Square="<<(r*r);
+break;
+case 19:
+cout<<"\nArea of a Triangle";
+cout<<"\n\tEnter the Length=";
+cin>>h;
+cout<<"\n\tEnter the Width=";
+cin>>b;
+cout<<"\nValue of Area of Triangle="<<(b*h);
+break;
+case 20:
+cout<<"\nVolume of a Frustum of a Cone";
+cout<<"\n\tEnter the R1=";
+cin>>l;
+cout<<"\n\tEnter the R2=";
+cin>>b;
+cout<<"\n\tEnter the Height=";
+cin>>h;
+cout<<"\nValue of Volume of a Frustum of a cone="<<(0.33*3.14*h)*((l*l)+(b*b)+(l*b));
+break;
+case 21:
+cout<<"\nCurved Surface Area of a Frustum of a Cone";
+cout<<"\n\tEnter the R1=";
+cin>>l;
+cout<<"\n\tEnter the R2=";
+cin>>b;
+cout<<"\n\tEnter the Height=";
+cin>>h;
+fi=l-b;
+cout<<"\nValue of Curved Surface Area of a Frustum of a Cone="<<sqrt((h*h)+(fi*fi));
+break;
+case 22:
+cout<<"\nTotal Surface Area of a Frustum of a Cone";
+cout<<"\n\tEnter the R1=";
+cin>>l;
+cout<<"\n\tEnter the R2=";
+cin>>b;
+cout<<"\n\tEnter the Length=";
+cin>>h;
+fi=l-b;
+cout<<"\nValue of Total Surface Area of a Frustum of a Cone="<<3.14*h*(l+b)+3.14*((l*l)+(b*b));
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+break;
+}
+
+}
+
+
+
+
+void hr::pro()
+{
+cout<<"\nProbability Formula \t\n";
+cout<<"\nEnter the Number of outcomes favourable to E=";
+cin>>e;
+cout<<"\nEnter the Number of all possible outcomes of the experiment=";
+cin>>n;
+cout<<"\n\tValue of Probability P(E)="<<e/n;
+}
+void hr::stati()
+{
+cout<<"\n Statistics All Formulas Available\n";
+cout<<"\n\t (1) Direct Mean Method \n";
+cout<<"\n\t (2) Assumed Mean Method \n";
+cout<<"\n\t (3) Step Deviation Method \n";
+cout<<"\n\t (4) Mode Method \n";
+cout<<"\n\t (5) Median Method \n";
+cout<<"\nEnter your choice=";
+cin>>t;
+switch(t)
+{
+case 1:
+cout<<"\n\tAccording to Direct Mean Method :- (fixi)/fi\n";
+cout<<"\n\t Fixi= ";
+cin>>fixi;
+cout<<"\n\t Fi= ";
+cin>>fi;
+cout<<"\n\t Value of Direct Mean Method="<<(fixi)/fi;
+break;
+case 2:
+cout<<"\n\tAccording to Assumed Mean Method:- a+(fidi)/fi\n";
+cout<<"\n\t Fidi= ";
+cin>>fidi;
+cout<<"\n\t Fi= ";
+cin>>fi;
+cout<<"\n\t a= ";
+cin>>a;
+cout<<"\n\t Value of Assumed Mean Method="<<(a+(fidi)/fi);
+break;
+case 3:
+cout<<"\n\t  Step Deviation Method :- (((fiui/fi)*h)+a)\n";
+cout<<"\n\t Fiui= ";
+cin>>fiui;
+cout<<"\n\t Fi= ";
+cin>>fi;
+cout<<"\n\t a= ";
+cin>>a;
+cout<<"\n\t h= ";
+cin>>h;
+cout<<"\n\t Value of Assumed Mean Method="<<(((fiui/fi)*h)+a);
+break;
+case 5:
+cout<<"\n\tAccording to Median  Method:- l+(((n/2)-cf)/f)*h) \n";
+cout<<"\n\t n= ";
+cin>>n;
+cout<<"\n\t cf= ";
+cin>>cf;
+cout<<"\n\t F= ";
+cin>>f;
+cout<<"\n\t l= ";
+cin>>l;
+cout<<"\n\t h= ";
+cin>>h;
+cout<<"\n\t Value of Median Method="<<l+((((n/2)-cf)/f)*h);
+break;
+case 4:
+cout<<"\n\tAccording to Mode Method :- l+((f1-f0)/(2*f1-f0-f2))*h)\n";
+cout<<"\n\t F0= ";
+cin>>f0;
+cout<<"\n\t F1= ";
+cin>>fi;
+cout<<"\n\t F2= ";
+cin>>f2;
+cout<<"\n\t l= ";
+cin>>l;
+cout<<"\n\t h= ";
+cin>>h;
+cout<<"\n\t Value of Mode Method="<<l+(((fi-f0)/((2*fi)-f0-f2))*h);
+break;
+default:
+cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+}
+}
+
+
+
+
+void main()
+{
+hr p;
+int c;
+char op;
+clrscr();
+
+while(1)
+{//while start
+	cout<<"\n\n\nSelect your Choice\n(o) Will be used to open the program\t\n (b) Will be used to back the program";
+      cout<<"\nEnter your choice=";
+	cin>>op;
+      switch(op)
+      {//switch start
+      case 'o':
+      cout<<"\t10 th Class Mathematics All Chapters Formulas\n";
+cout<<"Chapter No=3\n\t\t(3) Pair of Linear Equations in two Variables\n";
+cout<<"Chapter No=4\n\t\t(4) Quadratic Equations\n";
+cout<<"Chapter No=5\n\t\t(5) Arithmetic Progressions\n";
+cout<<"Chapter No=6\n\t\t(6) Triangles\n";
+cout<<"Chapter No=7\n\t\t(7) Coordinate Geometry\n";
+cout<<"Chapter No=8\n\t\t(8) Introduction to Trigonomentry\n";
+cout<<"Chapter No=12\n\t\t(12) Areas Related To Circles\n";
+cout<<"Chapter No=13\n\t\t(13) Surface Areas And Volumes\n";
+cout<<"Chapter No=14\n\t\t(14) Statistics\n";
+cout<<"Chapter No=15\n\t\t(15) Probability";
+
+	cout<<"\nEnter your choice=";
+	cin>>c;
+	switch(c)
+	{//switch 2 start
+		case 6:
+		p.tri();
+		break;
+		case 3:
+		p.pair();
+		break;
+		case 4:
+		p.quad();
+		break;
+		case 5:
+		p.ap();
+		break;
+		case 8:
+		p.sum();
+		break;
+		case 7:
+		p.cg();
+		break;
+		case 12:
+		p.cir();
+		break;
+		case 13:
+		p.sav();
+		break;
+		case 14:
+		p.stati();
+		break;
+		case 15:
+		p.pro();
+		break;
+		default:
+		cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+		break;
+	}//switch 2end
+	break;
+	case 'b':
+	exit(0);
+	break;
+	default:
+		cout<<"\n\tSorry Your Choice incorrect\n\tPlease enter only correct choice\n";
+		break;
+	}//switch end
+	}//while end
+
+getch();
+
+}
+
+
