@@ -1,0 +1,41 @@
+//si find
+#include<iostream.h>
+#include<conio.h>
+float inter(float,int,int);
+int inter(float,int);
+int inter(float,double,int);
+void main()
+	{
+		int p,r,t;
+		clrscr();
+		cout<<"Enter the Principal=";
+		cin>>p;
+		cout<<"Enter the Rate=";
+		cin>>r;
+		cout<<"Enter the Time=";
+		cin>>t;
+		cout<<"\n1st si="<<inter(p,r,t);
+		cout<<"\n2nd si="<<inter(p,r);
+		cout<<"\n3rd si="<<inter(p,r,t);
+		getch();
+	}
+float inter(float p,int r,int t)
+	{
+		float k;
+		k=(p*r*t)/100;
+		return(k);
+	}
+
+int inter(float p,double r,int t)
+	{
+		float k;
+		k=(p*r*t)/100;
+		return(k);
+	}
+
+	int inter(float p,int r)
+	{
+		float k;
+		k=(p*r*2)/100;
+		return(k);
+	}
