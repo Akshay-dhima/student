@@ -1,0 +1,81 @@
+//Permution and Combination formula
+#include<iostream.h>
+#include<conio.h>
+double fact(double n,double n1);
+class math
+{
+	 private:
+	 long n,n1,i,r,k;
+	 public:
+	 void permution();
+	 void combination();
+
+};
+void math::permution()
+{
+		n1=1;
+	    cout<<"\n\n\tEnter the n! -> ";
+	    cin>>n;
+	    cout<<"\n\n\tEnter the r! -> ";
+	    cin>>r;
+	    cout<<"\n\n\tn -> "<<fact(n,n1);
+	    k=(n-r);
+	    cout<<"\n\n\t(n-r) ->"<<fact(k,n1);
+	    cout<<"\n\n\n\tAccording to Permution Formula= "<<fact(n,n1)/(fact(k,n1));
+
+
+
+}
+
+void math::combination()
+{
+	n1=1;
+	    cout<<"\n\n\tEnter the n! -> ";
+	cin>>n;
+	cout<<"\n\n\tEnter the r! -> ";
+	cin>>r;
+	cout<<"\n\n\tn -> "<<fact(n,n1);
+	cout<<"\n\n\tr -> "<<fact(r,n1);
+	k=n-r;
+	cout<<"\n\n\t(n-r) -> "<<fact(k,n1);
+	cout<<"\n\n\n\tAccording to Combination Formula= "<<fact(n,n1)/(fact(r,n1)*fact(k,n1));
+
+
+}
+
+double fact(double n,double n1)
+{
+	for( int i=1;i<=n;i++)
+	{
+		n1*=i;
+	}
+	return(n1);
+}
+
+void main()
+{
+	long n,n1=1,i,r,k;
+	clrscr();
+	math p;
+	int op;
+	cout<<"\n\n\tSelect option\n";
+	cout<<"\n\n\t(1) Permution \n";
+	cout<<"\n\n\t(2) Combination \n";
+	cout<<"\n\n\tEnter your Choice -> ";
+	cin>>op;
+	if(op==2)
+	{
+		p.combination();
+	}
+	else
+	if(op==1)
+	{
+		p.permution();
+	}
+	else
+	{
+		cout<<"\n\n\tEnter Only Correct Choice";
+	}
+	getch();
+
+}
