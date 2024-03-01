@@ -1,0 +1,60 @@
+//find biggest no using constractor and friend function
+#include<iostream.h>
+#include<conio.h>
+class largest
+{
+	int a,b,c;
+	public:
+	largest()
+	{
+		  cout<<"\nEnter A=";
+		  cin>>a;
+	}
+	void getdata(int y)
+	{
+	      b=y;
+	}
+	largest(int x)
+	{
+		c=x;
+	}
+	friend void no(largest a ,largest b,largest c);
+};
+void no(largest a ,largest b,largest c)
+ {
+		if(a.a>b.b && a.a>c.c)
+		{
+			cout<<"\nBiggest no is="<<a.a;
+		}
+		else
+		if(b.b>c.c && b.b>a.a)
+		{
+			cout<<"\nBiggest no is="<<b.b;
+		}
+		else
+		if(c.c>b.b && c.c>a.a)
+		{
+			cout<<"\nBiggest no is="<<c.c;
+		}
+		else
+		{
+			cout<<"\n Numbers are same";
+		}
+}
+
+
+void main()
+{        int c1,b1,m;
+	clrscr();
+	largest p;
+	cout<<"\nEnter B=";
+	cin>>b1;
+	p.getdata(b1);
+	cout<<"\nEnter C=";
+	cin>>c1;
+	largest l(c1);
+	no(p,b1,c1);
+
+	getch();
+
+}
