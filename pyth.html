@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top{
+                 background-color:rgba(255, 99, 71, 0.8);
+               /* background-image:url('facebook.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;*/
+                width: 200px;
+                padding: 61px;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                border: 20px double rgba(101, 172, 212, 0.5);
+
+               
+                justify-content: space-evenly;
+                border-radius: 50%;
+                position: relative;
+                top: 117px;
+                left: 37%;
+                transition-duration: 2s;
+                transition-delay: 1s;
+                /*transition-timing-function: steps(4);*/
+                
+                        
+            }
+         #top:hover{
+                background-color: rgb(39, 91, 187,1);
+                border: 20px double rgba(15, 15, 15, 1.5);
+              /*  transform: rotate(360deg);*/
+                transform: rotateY(360deg);
+               /* transform: translate(50%,50%);*/
+         }   
+         @media(max-width:800px)
+         {
+                body{
+                    background-color: aqua;
+                }
+
+         }
+        input{
+                    background-color: #ebf703;
+                    border: 7px solid #fff0ff;
+                    border-radius: 50px;
+                    font-family: ui-monospace;
+                    text-align: center;
+            }    
+    </style>
+</head>
+<body>
+
+    <div id="top">
+            <input type="text" id="b" placeholder="Base">
+            <input type="text" id="p" placeholder="Pythagoras">   
+            <input type="button" onclick="find()" value="Find" placeholder="find">
+            <input type="text" id="result" readonly>
+    </div>
+    <script>
+            function find()
+            {
+                let p=document.getElementById('p').value;
+                let b=document.getElementById('b').value;
+                p=parseInt(p);
+                b=parseInt(b);
+                h=(Math.pow(p,2)+Math.pow(b,2));
+                h=Math.sqrt(h);
+                document.getElementById("result").value=h;
+            }
+    </script>
+</body>
+</html>
